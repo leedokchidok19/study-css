@@ -1,0 +1,101 @@
+:root{
+  --text-color:#f0f4f5;
+  --background-color:#263343;
+  --accent-color:#d49446;
+}
+body{
+  margin: 0;
+  font-family: "Source Sans Pro";
+}
+a{
+  text-decoration: none;
+  color: var(--text-color);
+}
+.navbar{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 8px 12px;
+}
+.navbar__logo{
+  font-size: 24px;
+  color: var(--text-color);
+}
+
+.navbar__logo i{
+  color: var(--accent-color);
+}
+
+.navbar__menu{
+  display: flex;
+  /*ul 리스트 디스크 스타일*/
+  list-style: none;
+  padding-left: 0;
+}
+
+.navbar__menu li{
+  /*margin을 넣으면 클릭할 수 있는 공간이 줄어든다.*/
+  padding: 8px 12px;
+}
+
+.navbar__menu li:hover{
+  background-color: var(--accent-color);
+  border-radius: 4px;
+}
+
+.navbar__icons{
+  list-style: none;
+  color:var(--text-color);
+  display: flex;
+}
+
+.navbar__icons li{
+  padding: 8px 12px;
+}
+
+.navbar__toggleBtn{
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: var(--accent-color);
+}
+
+@media screen and (max-width: 768px) {
+
+  .navbar{
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+
+  .navbar__menu{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar__menu li{
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar__icons{
+    display: none;
+    justify-content: center;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .navbar__toggleBtn{
+    display: block;
+  }
+
+  .navbar__menu.active,
+  .navbar__icons.active{
+    display: flex;
+  }
+
+}/*max-width: 768px*/
