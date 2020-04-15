@@ -11,6 +11,7 @@ a{
   text-decoration: none;
   color: var(--text-color);
 }
+/*header source : https://www.youtube.com/watch?v=X91jsJyZofw&t=1301s*/
 .navbar{
   display: flex;
   justify-content:space-between;
@@ -62,6 +63,7 @@ a{
   color: var(--accent-color);
 }
 
+/*header*/
 @media screen and (max-width: 768px) {
 
   .navbar{
@@ -98,4 +100,4 @@ a{
     display: flex;
   }
 
-}/*max-width: 768px*/
+}/*header max-width: 768px*/
