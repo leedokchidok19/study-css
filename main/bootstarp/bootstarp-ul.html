@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>list-unstyled, image-style, text-colors</title>
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link defer rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- 부가적인 테마 -->
+    <link defer rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+    <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      /*ul li,
+      ol li{
+        list-style: none;
+      }*/
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <p class="h1 text-info">list-styled</p>
+        <!--ol>li{내가 좋아하는 음식$}*3 *같은 개수는 마지막에 붙인다. 앞에 붙이면 예약어 오류-->
+        <ol class="list-unstyled">
+          <li>내가 좋아하는 음식1</li>
+          <li>내가 좋아하는 음식2</li>
+          <li>내가 좋아하는 음식3</li>
+        </ol>
+        <!--ul>li{내가 좋아하는 색상$}*3-->
+        <ul class="list-unstyled">
+          <li>내가 좋아하는 색상1</li>
+          <li>내가 좋아하는 색상2</li>
+          <li>내가 좋아하는 색상3</li>
+        </ul>
+      </div>
+      <div class="row">
+        <p class="h1 text-info">image-styled</p>
+        <!--원하는 이미지 크기 제공: https://placeholder.com/-->
+        <img class="img-rounded" src="https://via.placeholder.com/150" alt="둥근 모서리">
+        <img class="img-circle" src="https://via.placeholder.com/150" alt="원">
+        <img class="img-circle" src="https://via.placeholder.com/150x300" alt="타원형">
+        <img class="img-thumbnail" src="https://via.placeholder.com/150" alt="썸네일">
+      </div>
+      <!--div.row>p{lorem3}*6-->
+      <div class="row">
+        <p class="h1 text-info">text-colors, background-color</p>
+        <p class="text-muted">text-colors는 있다.background-color는 없다.</p>
+        <p class="text-primary">Text 흰색으로 변한다.</p>
+        <p class="text-success">Lorem ipsum dolor.</p>
+        <p class="text-info">Lorem ipsum dolor.</p>
+        <p class="text-warning">Lorem ipsum dolor.</p>
+        <p class="text-danger">Lorem ipsum dolor.</p>
+        <br>
+        <p class="bg-primary">Text 흰색으로 변한다.</p>
+        <p class="bg-success">Lorem ipsum dolor.</p>
+        <p class="bg-info">Lorem ipsum dolor.</p>
+        <p class="bg-warning">Lorem ipsum dolor.</p>
+        <p class="bg-danger">Lorem ipsum dolor.</p>
+        <br>
+        <p class="bg-primary">
+          <span class="text-warning">Text 색상을 변경하고 싶은 경우.</span>
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>
