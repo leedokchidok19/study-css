@@ -115,11 +115,9 @@
       let type = event.target.localName;
       let typeValue = null;
       if(type === 'button'){
-        alert('btn 입니다.');
         typeValue = event.target.childNodes[0].data;
       }//if end
       if(type === 'img'){
-        alert('img 입니다.');
         typeValue = event.target.alt;
       }//if end
       switch (typeValue) {
