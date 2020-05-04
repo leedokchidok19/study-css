@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>쇼핑몰19:14</title>
+  <title>쇼핑몰</title>
 
   <!--bootstrap css cdn-->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
@@ -27,6 +27,20 @@
     margin-top: 0.5rem;
     padding: 0.5rem 0.75rem;
   }
+  #sell-list > img,
+  #sell-list > button{
+    width: 70px;
+    height: auto;
+  }
+  #list{
+    height: 80vh;
+    overflow-y: auto;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  #list::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
 </style>
 
 </head>
@@ -36,24 +50,24 @@
 
   <div class="row">
     <!--logo-->
-    <div class="col-12">
+    <div class="col-2 ml-auto mr-auto">
       <img src="logo.png" alt="logo">
     </div>
 
   </div>
 <!--images-->
   <div class="row">
-
-      <img src="blue_t.png" alt="상의" class="sellItem w-25">
-      <img src="blue_p.png" alt="바지" class="sellItem w-25">
-      <img src="blue_s.png" alt="치마" class="sellItem w-25">
-      <button class="sellItem w-25 btn btn-info">Blue</button>
-      <button class="sellItem w-25 btn btn-warning">Yellow</button>
-      <button class="sellItem w-25 btn btn-danger">Pink</button>
-
+    <div id="sell-list" class="col-6 ml-auto mr-auto">
+      <img src="blue_t.png" alt="상의" class="sellItem">
+      <img src="blue_p.png" alt="바지" class="sellItem">
+      <img src="blue_s.png" alt="치마" class="sellItem">
+      <button class="sellItem btn btn-info">Blue</button>
+      <button class="sellItem btn btn-warning">Yellow</button>
+      <button class="sellItem btn btn-danger">Pink</button>
+    </div>
   </div>
 <!--content-->
-  <div id="list" class="row">
+  <div id="list" class="row col-8 ml-auto mr-auto">
 
   </div>
 
