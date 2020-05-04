@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>드림 코딩 학습 내용</title>
+
+<!--bootstrap css cdn-->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+      crossorigin="anonymous">
+<!--jquery cdn-->
+<script src="https://code.jquery.com/jquery-3.5.0.slim.js" crossorigin="anonymous"></script>
+<!--bootstrap js cdn-->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row text-center">
+    <div class="col-12">
+      <h3>0~10의 숫자중 짝수만 출력</h3><br>
+      'use strict';<br>
+      for(let i=0;i<=10;i++){<br>
+      &nbsp;if(i%2 != 0) continue;<br>
+      &nbsp;console.log(`짝수 : ${i}`);<br>
+      }
+    </div>
+    <ul id="printout" class="col-12 list-unstyled">
+      <!--js for문 출력-->
+    </ul>
+  </div>
+</div>
+
+<div class="row text-center">
+  <div class="col-12">
+    <h3>0~10의 숫자 출력중 8일때 break</h3><br>
+    for(let j=0;j<=10;j++){<br>
+      if(j === 8) break;<br>
+      console.log(`숫자 : ${j}`);<br>
+    }
+  </div>
+  <ul id="printout2" class="col-12 list-unstyled">
+    <!--js for문 출력-->
+  </ul>
+</div>
+
+<div class="row text-center">
+  <div class="col-12">
+    <h3>Calculate 함수</h3><br>
+
+  </div>
+  <div class="col-12 text-center">
+    <!--Calculate-->
+    <div class="col-12">
+      <form id="callCal" class="row">
+        <input type="text" name="calculate" class="col-5"
+                placeholder="add, substract, divide, multiply, remainder">
+        <input type="text" name="num1" class="col-3"
+                placeholder="숫자를 입력해 주세요.">
+        <input type="text" name="num2" class="col-3"
+                placeholder="숫자를 입력해 주세요.">
+        <button type="submit" name="button" class="col-1 btn btn-success">실행</button>
+      </form>
+    </div>
+    <div id="printout3">
+      <!--계산된 값 출력-->
+    </div>
+  </div>
+</div>
+
+  <script>
+    'use strict';
+    $(function(){
+
+      for(let i=0;i<=10;i++){
+         if(i%2 !== 0) continue;
+         console.log(`짝수 : ${i}`);
+         $('#printout').append('<li>짝수 : '+i+'</li>');
+      }//for1 end
+
+      for(let j=0;j<=10;j++){
+        if(j === 8) break;
+        console.log(`숫자 : ${j}`);
+        $('#printout2').append('<li>숫자 : '+j+'</li>');
+      }//for2 end
+
+
+      $( "#callCal" ).submit(function( e ) {
+        e.preventDefault();
+        let command = e.target.calculate.value;
+        let num1 = e.target.num1.value;
+        let num2 = e.target.num2.value;
+
+        if(command == '') return alert('add, substract, divide, multiply, remainder 중 하나를 입력해 주세요.');
+        if(num1 == '') return alert('첫번째 숫자를 입력 해주세요.');
+        if(num2 == '') return alert('첫번째 숫자를 입력 해주세요.');
+
+        calculate(command, num1, num2);
+        });
+
+    });//function end
+
+    //주어진 commmand 외에 것이 들어올 때, 대소문자 처리
+    function calculate(command, num1, num2){
+      let startCal = false;
+      let commmandArray = ['add', 'substract', 'divide', 'multiply', 'remainder'];
+
+      for(let i=0;i<commmandArray.length;i++){
+        console.log('매칭된 값 : '+commmandArray[i]);
+        if(commmandArray[i] === command ){
+          startCal = true;
+          break;
+        }
+      }//for end
+
+      if(startCal){
+        console.log('값 : '+command);
+        let a = Number(num1);//String to int
+        let b = Number(num2);
+        let c = 0;
+        console.log(typeof command);
+        if(command == 'add')       c = add(a,b);      //더하기
+        if(command == 'substract') c = substract(a,b);//빼기
+        if(command == 'divide')    c = divide(a,b);   //나누기
+        if(command == 'multiply')  c = multiply(a,b); //곱하기
+        if(command == 'remainder') c = remainder(a,b);//나머지
+
+        $('#printout3').append('<h4>결과 : ' + c + '</h4>');
+      }else{
+        alert(`add, substract, divide, multiply, remainder만 가능합니다.\n
+                          현재 입력하신 내용 : ${command}`);
+      }//if end
+
+    }//calculate end
+  //더하기
+  function add(a,b){
+    console.log(a+b);
+    return a+b;
+  }
+  //빼기
+  function substract(a,b){
+    console.log(a-b);
+    return a-b;
+  }
+  //나누기
+  function divide(a,b){
+    console.log(a/b);
+    return a/b;
+  }
+  //곱하기
+  function multiply(a,b){
+    console.log(a*b);
+    return a*b;
+  }
+  //나머지
+  function remainder(a,b){
+    console.log(a%b);
+    return a%b;
+  }
+
+  </script>
+
+</body>
+</html>

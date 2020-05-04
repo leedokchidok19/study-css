@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>쇼핑몰19:14</title>
+
+  <!--bootstrap css cdn-->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+  <!--jquery cdn-->
+  <script src="https://code.jquery.com/jquery-3.5.0.slim.js" crossorigin="anonymous"></script>
+  <!--bootstrap js cdn-->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<style media="screen">
+  body{
+    background-color:rgba(25, 25, 25, 0.8);
+  }
+  .logo{
+    width:150px;
+    height:auto;
+  }
+  .r-list-row{
+    background: rgb(255,255,255);
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+  }
+</style>
+
+</head>
+<body>
+
+<div class="container-fluid">
+
+  <div class="row">
+    <!--logo-->
+    <div class="col-12">
+      <img src="logo.png" alt="logo">
+    </div>
+
+  </div>
+<!--images-->
+  <div class="row">
+
+      <img src="blue_t.png" alt="상의" class="sellItem w-25">
+      <img src="blue_p.png" alt="바지" class="sellItem w-25">
+      <img src="blue_s.png" alt="치마" class="sellItem w-25">
+      <button class="sellItem w-25 btn btn-info">Blue</button>
+      <button class="sellItem w-25 btn btn-warning">Yellow</button>
+      <button class="sellItem w-25 btn btn-danger">Pink</button>
+
+  </div>
+<!--content-->
+  <div id="list" class="row">
+
+  </div>
+
+</div><!--container-fluid end-->
+
+<script type="text/javascript">
+
+  function list(){
+
+    let sex = ['man', 'female'];
+    let size = ['large', 'small'];
+    let images = ['blue_p', 'blue_s', 'blue_t'
+                , 'pink_p', 'pink_s', 'pink_t'
+                , 'yellow_p', 'yellow_s', 'yellow_t'
+                ];
+    let oneCell = null;
+
+    images.forEach(function(imgItem, imgIndex){
+      let color = imgItem.substr(0, imgItem.length-2);
+      let typec = imgItem.substr(imgItem.length-2, 2);
+      size.forEach(function(sizeItem, sizeIndex){
+        sex.forEach(function(sexItem, sexIndex){
+          oneCell =  '<div class="col-12 r-list-row '+color+' '+typec+'">'
+                  +    '<img src='+imgItem+'.png alt="img">'
+                  +    '<span class="sex">'+sexItem+'</span>'
+                  +    ', '
+                  +  '<span class="color">'+sizeItem+'</span> size'
+                  +  '</div>';
+
+          $('#list').append(oneCell);
+        });//sex end
+      });//size end
+    });//images end
+
+  }//list end
+
+  $(function(){
+
+    list();
+
+    $(".sellItem").on("click", function(event) {
+
+      $( '.r-list-row' ).hide();
+//      $( '.r-list-row' ).toggle();
+      let type = event.target.localName;
+      let typeValue = null;
+      if(type === 'button'){
+        alert('btn 입니다.');
+        typeValue = event.target.childNodes[0].data;
+      }//if end
+      if(type === 'img'){
+        alert('img 입니다.');
+        typeValue = event.target.alt;
+      }//if end
+      switch (typeValue) {
+        case 'Blue': $('.blue').show();
+                    break;
+        case 'Yellow': $('.yellow').show();
+                    break;
+        case 'Pink': $('.pink').show();
+                    break;
+        case '상의': $('._t').show();
+                    break;
+        case '바지': $('._p').show();
+                    break;
+        case '치마': $('._s').show();
+                    break;
+        default:'';
+
+      }//switch end
+    });//on.click end
+
+  });//$function end
+</script>
+
+</body>
+</html>
