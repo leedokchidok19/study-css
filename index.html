@@ -3,50 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <title>Study CSS</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index/index.css">
     <!--google fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
     <!--폰트 어썸 : Place your kit's code here https://fontawesome.com/-->
     <script src="https://kit.fontawesome.com/c1420bfedb.js" crossorigin="anonymous"></script>
-    <script src="index.js" defer></script>
+    <script src="index/index.js" defer></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar__logo">
-            <i class="fab fa-accusoft"></i>
-            <a href="#">DreamCoding</a>
-        </div>
-        <ul class="navbar__menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Weddings</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Bookings</a></li>
-        </ul>
-        <div class="navbar__icons">
-            <li><i class="fab fa-twitter"></i></li>
-            <li><i class="fab fa-facebook"></i></li>
-        </div>
-        <a href="#" class="navbar__toggleBtn">
-            <i class="fas fa-bars"></i>
-        </a>
-    </nav>
-    <div>
-        <ul>
-            <li><a href="clone_css/ellie/studyjs.html">드림코딩 js</a></li>
-            <li><a href="clone_css/ellie/miniShoppingMall.html">쇼핑몰</a></li>
-            <li><a href="clone_css/etc/hamburgerMenuOverlay/hamburgerMenuOverlay.html">햄버거메뉴오버레이</a></li>
-            <li><a href="clone_css/etc/parallaxwebsite/index.html">뒷배경</a></li>
-            <li><a href="clone_css/etc/ParallaxScrollingEffectMaster/index.html">스크롤</a></li>
-            <li><a href="clone_css/youtube/ot/hover/hover.html">펩시</a></li>
-            <li><a href="clone_css/youtube/et/urbanFashion/urbanFashion.html">패션</a></li>
-            <li><a href="clone_css/youtube/et/filter/filter.html">필터</a></li>
-            <li><a href="clone_css/youtube/et/overlayTopDown/index.html">오버레이</a></li>
-            <li><a href="clone_css/youtube/gti/portfolioWebSite/index.html">포토폴리오</a></li>
-            <li><a href="clone_css/youtube/wc/website/index.html">웹사이트</a></li>
-        </ul>
-    </div>
+
+    <header>
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <i class="fab fa-pagelines"></i>
+                <a href="#">Rom's</a>
+            </div>
+            <ul class="navbar__menu">
+                <li><a href="#">home</a></li>
+                <li><a href="#">gallery</a></li>
+                <li><a href="#">portfolio</a></li>
+                <li><a href="#">faq</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+            <a href="#" class="navbar__toggleBtn">
+                <i class="fas fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+
+    <!--본문 : 슬라이드, SNS-->
+    <section id="container">
+        <!--SNS 영역-->
+        <article class="social_icons">
+            <ul>
+                <li>
+                    <a href="https://github.com/leedokchidok19" class="snsBtn" data-sns="GitHub" target="_blank"><i class="fab fa-github-square"></i></a>
+                </li>
+                <li>
+                    <a href="#" class="snsBtn" data-sns="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </li>
+                <li>
+                    <a href="#" class="snsBtn" data-sns="Instagram" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                </li>
+                <li>
+                    <a href="#" class="snsBtn" data-sns="Facebook" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                </li>
+            </ul>
+        </article>
+
+        <!--슬라이드 : 방향 수직-->
+        <section class="carousel vertical">
+            <article id="carousel__1" class="active">
+                <div id="portfolio">
+                    <ul>
+                        <li><a href="clone_css/ellie/studyjs.html">드림코딩 js</a></li>
+                        <li><a href="clone_css/ellie/miniShoppingMall.html">쇼핑몰</a></li>
+                        <li><a href="clone_css/etc/hamburgerMenuOverlay/hamburgerMenuOverlay.html">햄버거메뉴오버레이</a></li>
+                        <li><a href="clone_css/etc/parallaxwebsite/index.html">뒷배경</a></li>
+                        <li><a href="clone_css/etc/ParallaxScrollingEffectMaster/index.html">스크롤</a></li>
+                        <li><a href="clone_css/youtube/ot/hover/hover.html">펩시</a></li>
+                        <li><a href="clone_css/youtube/et/urbanFashion/urbanFashion.html">패션</a></li>
+                        <li><a href="clone_css/youtube/et/filter/filter.html">필터</a></li>
+                        <li><a href="clone_css/youtube/et/overlayTopDown/index.html">오버레이</a></li>
+                        <li><a href="clone_css/youtube/gti/portfolioWebSite/index.html">포토폴리오</a></li>
+                        <li><a href="clone_css/youtube/wc/website/index.html">웹사이트</a></li>
+                    </ul>
+                </div>
+            </article>
+            <article id="carousel__2">
+                
+            </article>
+            <article id="carousel__3">
+                
+            </article>
+            <article id="carousel__4">
+                
+            </article>
+            <article id="carousel__5">
+                
+            </article>
+            
+        </section>
+        <!--슬라이드-->
+    </section>
+    <!--본문 : 슬라이드, SNS-->
+
+    <footer style="display: none;">
+        <address>
+            <a href="https://github.com/leedokchidok19" target="_blank">LeedokChidok</a>
+        </address>
+    </footer>
 
 </body>
 </html>
