@@ -28,6 +28,7 @@ const vertical_items = document.querySelectorAll('.carousel.vertical > article')
 const v_length = vertical_items.length;//슬라이드 아이템 총 개수
 let i = 0;//슬라이드 번호
 vertical_carousel.addEventListener('wheel', (event) => {
+    console.log(v_length);
     console.log(`y축 값 : ${event.deltaY}`);
     vertical_items.forEach(item => {
         item.classList.remove('active');
@@ -40,7 +41,7 @@ vertical_carousel.addEventListener('wheel', (event) => {
     }
     //
     if(i >= v_length){//슬라이드 총 개수를 넘어갈 경우
-        i=1;//마지막 -> 첫 번째 슬라이드
+        i=0;//마지막 -> 첫 번째 슬라이드
     }
     if(i < 0){
         i=v_length-1;//첫 번째 -> 마지막 슬라이드
