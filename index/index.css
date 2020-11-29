@@ -97,69 +97,6 @@ section#container {
 #carousel__1 {
     background: url(images/slide-1.jpg) no-repeat 0 center;
 }
-#portfolio {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70vw;
-    height: 50vh;
-}
-#portfolio > .container {
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: nowrap;
-    padding: 30px;
-}
-.container .card {
-    position: relative;
-    max-width: 300px;
-    height: 215px;
-    background: #fff;
-    margin: 30px 10px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-    transition: 0.3s ease-in-out;
-}
-.container .card:hover {
-    height: 420px;
-}
-.container .card .imgBx{
-    position: relative;
-    width: 260px;
-    height: 260px;
-    top: -60px;
-    left: 20px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-.container .card .imgBx img{
-    max-width: 100%;
-    max-height: 100%;
-    height: 100%;
-    border-radius: 4px;
-}
-.container .card .content{
-    position: relative;
-    margin-top: -140px;
-    padding: 10px 15px;
-    text-align: center;
-    color: #111;
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.3s ease-in-out;
-}
-.container .card:hover .content{
-    visibility: visible;
-    opacity: 1;
-    margin-top: -40px;
-    transition-delay: 0.3s;
-}
 /*carousel 1*/
 /*carousel 2*/
 #carousel__2 {
