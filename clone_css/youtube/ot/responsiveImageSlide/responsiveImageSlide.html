@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive image slide</title>
+  <link rel="stylesheet" href="responsiveImageSlide.css">
+</head>
+<body>
+  <div class="container">
+    <div class="slide">
+      <div class="slides" style="--img: url('https://cdn.pixabay.com/photo/2024/03/09/10/14/nature-8622415_1280.jpg')">
+        <div class="content">
+          <h2>Slide 01</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolorem nulla mollitia natus, molestiae dolorum.</p>
+        </div>
+      </div>
+      <div class="slides" style="--img: url('https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_1280.jpg')">
+        <div class="content">
+          <h2>Slide 02</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolorem nulla mollitia natus, molestiae dolorum.</p>
+        </div>
+      </div>
+      <div class="slides" style="--img: url('https://cdn.pixabay.com/photo/2022/07/22/13/23/coast-7338147_1280.jpg')">
+        <div class="content">
+          <h2>Slide 03</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolorem nulla mollitia natus, molestiae dolorum.</p>
+        </div>
+      </div>
+      <div class="slides" style="--img: url('https://cdn.pixabay.com/photo/2022/10/23/12/50/trees-7541217_1280.jpg')">
+        <div class="content">
+          <h2>Slide 04</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolorem nulla mollitia natus, molestiae dolorum.</p>
+        </div>
+      </div>
+      <div class="slides" style="--img: url('https://cdn.pixabay.com/photo/2024/01/04/16/48/landscape-8487906_1280.jpg')">
+        <div class="content">
+          <h2>Slide 05</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolorem nulla mollitia natus, molestiae dolorum.</p>
+        </div>
+      </div>
+      <div class="slides" style="--img: url('https://cdn.pixabay.com/photo/2022/07/12/07/06/lake-7316684_1280.jpg')">
+        <div class="content">
+          <h2>Slide 06</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolorem nulla mollitia natus, molestiae dolorum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="buttons">
+      <span class="prev"></span>
+      <span class="next"></span>
+    </div>
+  </div>
+  <script>
+    let next = document.querySelector('.next');
+    let prev = document.querySelector('.prev');
+    let slide = document.querySelector('.slide');
+    
+    next.addEventListener('click', function(){
+      let slides = document.querySelectorAll('.slides');
+      slide.appendChild(slides[0]);
+    });
+    prev.addEventListener('click', function(){
+      let slides = document.querySelectorAll('.slides');
+      slide.prepend(slides[slides.length - 1]);
+    });
+  </script>
+</body>
+</html>
